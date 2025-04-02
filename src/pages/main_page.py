@@ -38,3 +38,7 @@ class MainPage(BasePage):
     def logo_yandex_click(self):
         with step(f'Click logo yandex'):
             self.click_element(MainPageLocators.LOGO_YANDEX_BUTTON)
+
+    def get_current_url(self):
+        with step(f'Current url'):
+            return self.driver.current_url
